@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Components/images/spotify.png" type="image/x-icon">
+</head>
+
+<body>
+    <section id="container">
+        <div id="left">
+            <div id="menu-bar">
+                <div id="home" onclick=changeActive() class="menu-list active">
+                    <img src="./Components/images/home.png" alt="Home" id="home-logo" class="logo">
+                    <span class="bar-text">Home</span>
+                </div>
+                <div id="search" onclick=changeActive() class="menu-list">
+                    <img src="./Components/images/search.png" alt="Search" id="search-logo" class="logo">
+                    <span class="bar-text">Search</span>
+                </div>
+            </div>
+            <div id="library-bar">
+                <div id="library-top">
+                    <div id="library">
+                        <img src="./Components/images/library.png" alt="Library" id="library-logo" class="logo">
+                        <span class="bar-text">Your Library</span>
+                    </div>
+                    <div id="library-icons">
+                        <div><img src="./Components/images/add.png" alt="Add" id="add-logo" class="logo"></div>
+                        <div><img src="./Components/images/more.png" alt="Show More" id="more-logo" class="logo"></div>
+                    </div>
+                </div>
+                <div id="library-menu">
+                    <div class="list-item" onclick="highlightMenu(this)">
+                        Playlists
+                    </div>
+                    <div class="list-item" onclick="highlightMenu(this)">
+                        Podcasts
+                    </div>
+                </div>
+                <div id="library-list">
+                    <div class="library-list-items" onclick="highlightLibrary(this)">
+                        <div class="art">
+                            <img src="./Components/images/sentio.png" alt="Sentio">
+                        </div>
+                        <div class="library-info">
+                            <div class="library-name">Sentio</div>
+                            <div class="library-type">Album • Martin Garrix</div>
+                        </div>
+                    </div>
+                    <div class="library-list-items" onclick="highlightLibrary(this)">
+                        <div class="art">
+                            <img src="./Components/images/sfsg-art.png" alt="So Far So Good">
+                        </div>
+                        <div class="library-info">
+                            <div class="library-name">So Far So Good</div>
+                            <div class="library-type">Album • The Chainsmokers</div>
+                        </div>
+                    </div>
+                    <div class="library-list-items" onclick="highlightLibrary(this)">
+                        <div class="art">
+                            <img src="./Components/images/euphoric.jpg" alt="Euphoric Nights">
+                        </div>
+                        <div class="library-info">
+                            <div class="library-name">Euphoric Nights</div>
+                            <div class="library-type">Playlist • RHT21</div>
+                        </div>
+                    </div>
+                    <div class="library-list-items" onclick="highlightLibrary(this)">
+                        <div class="art">
+                            <img src="./Components/images/wwj.jpg" alt="World War Joy">
+                        </div>
+                        <div class="library-info">
+                            <div class="library-name">World War Joy</div>
+                            <div class="library-type">Album • The Chainsmokers</div>
+                        </div>
+                    </div>
+                    <div class="library-list-items" onclick="highlightLibrary(this)">
+                        <div class="art">
+                            <img src="./Components/images/driving.jpg" alt="Driving Delights">
+                        </div>
+                        <div class="library-info">
+                            <div class="library-name">Driving Delights</div>
+                            <div class="library-type">Playlist • RHT21</div>
+                        </div>
+                    </div>
+                    <div class="library-list-items" onclick="highlightLibrary(this)">
+                        <div class="art">
+                            <img src="./Components/images/top.jpg" alt="Your Top Songs 2023">
+                        </div>
+                        <div class="library-info">
+                            <div class="library-name">Your Top Songs 2023</div>
+                            <div class="library-type">Playlist • Spotify</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="home-view">
+                <div id="top-right">
+                    <div class="navigation-buttons">
+                        <div><img src="./Components/images/go-back.png" alt="Go Back"></div>
+                        <div><img src="./Components/images/go-next.png" alt="Go Next"></div>
+                    </div>
+                    <div class="profile-section">
+                        <div><img src="./Components/images/bell.png" alt="What's New"></div>
+                        <div><img src="./Components/images/friends.png" alt="Friends' Activity"></div>
+                        <div><img src="./Components/images/profile.png" alt="Profile"></div>
+                    </div>
+                </div>
+                <div id="right-menu">
+                    <div class="list-item menu-active" onclick="changeActiveMenu(this)">
+                        All
+                    </div>
+                    <div class="list-item" onclick="changeActiveMenu(this)">
+                        Music
+                    </div>
+                    <div class="list-item" onclick="changeActiveMenu(this)">
+                        Podcasts
+                    </div>
+                </div>
+                <div id="playlist-bar">
+                    <div class="playlist-card">
+                        <img src="./Components/images/euphoric.jpg" alt="Euphoric Nights">
+                        Euphoric Nights
+                        <img src="./Components/images/play-button.png" class="play-button">
+                    </div>
+                    <div class="playlist-card">
+                        <img src="./Components/images/driving.jpg" alt="Driving Delights">
+                        Driving Delights
+                        <img src="./Components/images/play-button.png" class="play-button">
+                    </div>
+                    <div class="playlist-card">
+                        <img src="./Components/images/sentio.png" alt="Sentio">
+                        Sentio
+                        <img src="./Components/images/play-button.png" class="play-button">
+                    </div>
+                    <div class="playlist-card">
+                        <img src="./Components/images/sfsg-art.png" alt="So Far So Good">
+                        So Far So Good
+                        <img src="./Components/images/play-button.png" class="play-button">
+                    </div>
+                    <div class="playlist-card">
+                        <img src="./Components/images/wwj.jpg" alt="World War Joy">
+                        World War Joy
+                        <img src="./Components/images/play-button.png" class="play-button">
+                    </div>
+                    <div class="playlist-card">
+                        <img src="./Components/images/liked.jpg" alt="Liked Songs">
+                        Liked Songs
+                        <img src="./Components/images/play-button.png" class="play-button">
+                    </div>
+                </div>
+                <div class="main-header">
+                    <p>Made For You</p>
+                </div>
+                <div class="show-all">
+                    <p>Show all</p>
+                </div>
+                <div id="card-container">
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/discover.jpg" class="card-art"alt="Discover">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Discover Weekly
+                            </div>
+                            <div class="home-card-subtitle">
+                                Your weekly mixtape of fresh music. Enjoy new music and deep cuts picked for you. Updates every Monday.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/daily-mix1.jpg" class="card-art" alt="Daily Mix 1">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Daily Mix 1
+                            </div>
+                            <div class="home-card-subtitle">
+                                Martin Garrix, Mattisse & Sadko, DubVision and more
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/daily-mix2.jpg" class="card-art" alt="Daily Mix 2">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Daily Mix 2
+                            </div>
+                            <div class="home-card-subtitle">
+                                Kygo, Gryffin, NOTD and more
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/daily-mix3.jpg" class="card-art" alt="Daily Mix 3">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Daily Mix 3
+                            </div>
+                            <div class="home-card-subtitle">
+                                Midnight Kids, Sabai, GhostDragon and more
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/daily-mix4.jpg" class="card-art" alt="Daily Mix 4">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Daily Mix 4
+                            </div>
+                            <div class="home-card-subtitle">
+                                Andy Grammer, One Direction, Shawn Mendes and more
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header">
+                    <p>Your top mixes</p>
+                </div>
+                <div class="show-all">
+                    <p>Show all</p>
+                </div>
+                <div id="card-container">
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/pop-mix.jpg" class="card-art" alt="Pop Mix">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Pop Mix
+                            </div>
+                            <div class="home-card-subtitle">
+                                Martin Garrix, The Chainsmokers, Loote and more
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/dance.jpg" class="card-art" alt="Dance/Electronic Mix">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Dance/Electronic Mix
+                            </div>
+                            <div class="home-card-subtitle">
+                                K-391, Kygo, Nicky Romero and more
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/house.jpg" class="card-art" alt="House Mix">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                House Mix
+                            </div>
+                            <div class="home-card-subtitle">
+                                Snakehips, Two Friends, Mike Perry and more
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/hindi.jpg" class="card-art" alt="Hindi Mix">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Hindi Mix
+                            </div>
+                            <div class="home-card-subtitle">
+                                Mithoon, Dev Abohari, Aditya A and more
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/90s.jpg" class="card-art" alt="90s Mix">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                90s Mix
+                            </div>
+                            <div class="home-card-subtitle">
+                                System of a Down, Radiohead, U2 and more
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header">
+                    <p>Recently played</p>
+                </div>
+                <div class="show-all">
+                    <p>Show all</p>
+                </div>
+                <div id="card-container">
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/euphoric.jpg" class="card-art" alt="Euphoric Nights">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Euphoric Nights
+                            </div>
+                            <div class="home-card-subtitle">
+                                mood.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/driving.jpg" class="card-art" alt="Driving Delights">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Driving Delights
+                            </div>
+                            <div class="home-card-subtitle">
+                                travel safe.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/electro.jpg" class="card-art" alt="Electronify">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Electronify
+                            </div>
+                            <div class="home-card-subtitle">
+                                dance.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/progressive.jpg" class="card-art" alt="Progressive House">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Progressive House
+                            </div>
+                            <div class="home-card-subtitle">
+                                by RHT21
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-card">
+                        <div class="home-card-art">
+                            <img src="./Components/card/homepage/sentio.png" class="card-art" alt="Sentio">
+                            <img src="./Components/images/play-button.png" class="play-button-card">
+                        </div>
+                        <div class="home-card-body">
+                            <div class="home-card-title">
+                                Sentio
+                            </div>
+                            <div class="home-card-subtitle">
+                                Martin Garrix
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search-view" class="hidden">
+                <div id="top-right">
+                    <div class="navigation-buttons">
+                        <div><img src="./Components/images/go-back.png" alt="Go Back"></div>
+                        <div><img src="./Components/images/go-next.png" alt="Go Next"></div>
+                        <div class="search-bar">
+                            <img src="./Components/images/search.png" alt="Search" id="search-logo">
+                            <input type="text" name="search" id="search-area" placeholder="What do you want to play?">
+                        </div>
+                    </div>
+                    <div class="profile-section">
+                        <div><img src="./Components/images/bell.png" alt="What's New"></div>
+                        <div><img src="./Components/images/friends.png" alt="Friends' Activity"></div>
+                        <div><img src="./Components/images/profile.png" alt="Profile"></div>
+                    </div>
+                </div>
+                <div class="browse-all">
+                    Browse all
+                </div>
+                <div class="browse-category">
+                    <div id="Music" class="card">Music<div></div></div>
+                    <div id="Podcast" class="card">Podcast<div></div></div>
+                    <div id="Live-Events" class="card">Live Events<div></div></div>
+                    <div id="Made-For-You" class="card">Made For You<div></div></div>
+                    <div id="New-Releases" class="card">New Releases<div></div></div>
+                    <div id="Hindi" class="card">Hindi<div></div></div>
+                    <div id="Punjabi" class="card">Punjabi<div></div></div>
+                    <div id="Tamil" class="card">Tamil<div></div></div>
+                    <div id="Ghazals" class="card">Ghazals<div></div></div>
+                    <div id="Dance" class="card">Dance/Electronics<div></div></div>
+                    <div id="Anime" class="card">Anime<div></div></div>
+                    <div id="Chill" class="card">Chill<div></div></div>
+                    <div id="Travel" class="card">Travel<div></div></div>
+                    <div id="Charts" class="card">Charts<div></div></div>
+                    <div id="Telugu" class="card">Telugu<div></div></div>
+                    <div id="Pop" class="card">Pop<div></div></div>
+                    <div id="Indie" class="card">Indie<div></div></div>
+                    <div id="Love" class="card">Love<div></div></div>
+                    <div id="Discover" class="card">Discover<div></div></div>
+                    <div id="Trending" class="card">Trending<div></div></div>
+                    <div id="Mood" class="card">Mood<div></div></div>
+                    <div id="Party" class="card">Party<div></div></div>
+                    <div id="Student" class="card">Student<div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="playing-bar">
+        <div id="left-bar">
+            <div id="playing-art">
+                <img src="./Components/images/carry-you.jpg" alt="Your Top Songs 2023">
+            </div>
+            <div id="playing-song">
+                <div id="playing-song-name" class="library-name">Carry You</div>
+                <div id="playing-song-artist" class="library-type">Martin Garrix, Third Party, Oaks, Declan J Donovan
+                </div>
+            </div>
+            <div id="like-bar">
+                <img id="not-liked" src="./Components/images/heart-outline.png">
+                <img id="liked" class="hidden" src="./Components/images/heart-full.png">
+            </div>
+        </div>
+        <div id="mid-bar">
+            <div id="playing-icons">
+                <img id="shuffle-off" src="./Components/images/shuffle-off.png">
+                <img class="hidden" id="shuffle-on" src="./Components/images/shuffle-on.png">
+                <img id="prev"" src=" ./Components/images/prev.png">
+                <img class="hidden" id="pause" src="./Components/images/pause.png">
+                <img id="play" src="./Components/images/play.png">
+                <img id="next" src="./Components/images/next.png">
+                <img id="repeat-off" src="./Components/images/repeat-off.png">
+                <img class="hidden" id="repeat-on" src="./Components/images/repeat-on.png">
+            </div>
+            <div id="playing-progress-bar">
+                <div id="current-time"></div>
+                <input type="range" name="" id="progress-bar" min="0" max="100" value="0">
+                <div id="song-time"></div>
+            </div>
+        </div>
+        <div id="right-bar">
+            <div id="right-bar-icons">
+                <img id="mic" src="./Components/images/mic.png">
+                <img id="queue" src="./Components/images/queue.png">
+                <img id="devices" src="./Components/images/devices.png">
+            </div>
+            <div id="volume-bar">
+                <div id="volume-bar-icons">
+                    <img id="vol-0" src="./Components/images/vol-3.svg">
+                </div>
+                <div id="volume-bar-slider">
+                    <input type="range" name="range" id="volume" min="0" max="100" value="70">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
