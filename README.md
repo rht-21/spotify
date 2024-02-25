@@ -18,7 +18,7 @@ A Spotify clone website with a replica of Spotify's original UI, built using HTM
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/rht-21/spotify-clone.git
+git clone https://github.com/rht-21/spotify.git
 ```
 
 2. Navigate to the project directory:
